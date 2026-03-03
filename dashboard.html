@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Campus Parcel Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- HEADER -->
+    <div class="header-bar">
+      <div>
+        <h2>📦 Campus Parcel Dashboard</h2>
+        <p id="userInfo"></p>
+      </div>
+
+      <div class="header-actions">
+        <button class="theme-toggle" onclick="toggleTheme()">🌙 / ☀</button>
+        <button class="logout-btn" onclick="logout()">Logout</button>
+      </div>
+    </div>
+
+
+    <!-- ================= STUDENT SECTION ================= -->
+    <div id="studentSection" class="card" style="display:none;">
+      <h3>Your Parcels</h3>
+      <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>Courier</th>
+            <th>Status</th>
+            <th>Received At</th>
+          </tr>
+        </thead>
+        <tbody id="parcelTable"></tbody>
+      </table>
+    </div>
+    </div>
+
+
+    <!-- ================= GATEKEEPER SECTION ================= -->
+    <div id="gatekeeperSection" class="card" style="display:none;">
+
+      <!-- Add Parcel -->
+      <h3>Add Parcel</h3>
+
+      <div class="form-row">
+        <input type="text" id="rollSearch" placeholder="Enter Student Roll Number">
+        <input type="text" id="courier" placeholder="Courier Name">
+        <button onclick="addParcel()">Add Parcel</button>
+      </div>
+
+
+      <!-- Search -->
+      <h3 style="margin-top:30px;">Pending Parcels (Latest 5)</h3>
+
+      <div class="form-row">
+        <input type="text" id="parcelSearch" placeholder="Search by Roll / Name / Mobile / Email / Courier">
+        <button onclick="searchParcels()">Search</button>
+      </div>
+
+      <!-- Table -->
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>Roll</th>
+            <th>Name</th>
+            <th>Mobile</th>
+            <th>Email</th>
+            <th>Courier</th>
+            <th>Status</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="allParcelTable"></tbody>
+      </table>
+    </div>
+    </div>
+
+  </div>
+
+  <!-- Toast -->
+  <div id="toast" class="toast"></div>
+
+  <script type="module" src="js/dashboard.js"></script>
+
+</body>
+</html>

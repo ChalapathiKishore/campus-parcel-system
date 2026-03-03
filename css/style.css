@@ -1,0 +1,338 @@
+/* =========================================================
+   ROOT VARIABLES (LIGHT MODE)
+========================================================= */
+:root {
+  --bg-color: #f3f4f6;
+  --card-bg: #ffffff;
+  --text-color: #111827;
+  --primary: #2563eb;
+  --primary-hover: #1e40af;
+  --danger: #ef4444;
+  --border-color: #e5e7eb;
+}
+
+/* =========================================================
+   DARK MODE VARIABLES
+========================================================= */
+body.dark-mode {
+  --bg-color: #111827;
+  --card-bg: #1f2937;
+  --text-color: #f9fafb;
+  --primary: #3b82f6;
+  --primary-hover: #2563eb;
+  --danger: #f87171;
+  --border-color: #374151;
+}
+
+/* =========================================================
+   GLOBAL
+========================================================= */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: 0.4s ease;
+}
+
+h2, h3 {
+  margin: 0;
+}
+
+/* =========================================================
+   AUTH PAGES BACKGROUND
+========================================================= */
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  transition: 0.4s ease;
+}
+
+body.dark-mode .auth-container {
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+}
+
+/* =========================================================
+   AUTH CARD
+========================================================= */
+.auth-card {
+  background: var(--card-bg);
+  padding: 40px;
+  width: 360px;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+  transition: 0.4s ease;
+}
+
+.auth-card h2 {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+/* Header */
+.auth-header {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Inputs */
+.auth-card input,
+.auth-card select {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  transition: 0.3s;
+  font-size: 14px;
+  background: transparent;
+  color: var(--text-color);
+}
+
+.auth-card input:focus,
+.auth-card select:focus {
+  border-color: var(--primary);
+  outline: none;
+  box-shadow: 0 0 10px rgba(37, 99, 235, 0.4);
+}
+
+/* Buttons */
+.auth-card button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 20px;
+  border-radius: 10px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  background: linear-gradient(135deg, var(--primary), #7c3aed);
+  color: white;
+  transition: 0.3s ease;
+}
+
+.auth-card button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* Links */
+.auth-link {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.auth-link a {
+  color: var(--primary);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.auth-link a:hover {
+  text-decoration: underline;
+}
+
+/* =========================================================
+   DASHBOARD CONTAINER
+========================================================= */
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 40px auto;
+}
+
+/* Header Bar */
+.header-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.header-actions button {
+  margin-left: 8px;
+}
+
+#userInfo {
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+/* =========================================================
+   CARD
+========================================================= */
+.card {
+  background: var(--card-bg);
+  padding: 25px;
+  margin-top: 25px;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+/* =========================================================
+   INPUTS (DASHBOARD)
+========================================================= */
+input, select {
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  background: transparent;
+  color: var(--text-color);
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+button {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  background-color: var(--primary);
+  color: white;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--primary-hover);
+  transform: scale(1.03);
+}
+
+.logout-btn {
+  background-color: var(--danger);
+}
+
+.theme-toggle {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+/* =========================================================
+   TABLE
+========================================================= */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  border: 1px solid var(--border-color);
+  padding: 10px;
+  text-align: center;
+}
+
+th {
+  background-color: var(--primary);
+  color: white;
+}
+
+/* =========================================================
+   TOAST
+========================================================= */
+.toast {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #111827;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 8px;
+  opacity: 0;
+  transition: 0.4s ease;
+}
+
+.toast.show {
+  opacity: 1;
+}
+.toast.success {
+  background: #16a34a;
+}
+
+.toast.error {
+  background: #dc2626;
+}
+/* ================= ROLE SELECT FIX ================= */
+
+.role-select {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  font-size: 14px;
+  cursor: pointer;
+  background-color: var(--card-bg);
+  color: var(--text-color);
+}
+
+/* Fix dropdown options */
+.role-select option {
+  background-color: var(--card-bg);
+  color: var(--text-color);
+}
+
+/* Dark mode override */
+body.dark-mode .role-select {
+  background-color: #374151;
+  color: #f9fafb;
+  border: 1px solid #4b5563;
+}
+
+body.dark-mode .role-select option {
+  background-color: #374151;
+  color: #f9fafb;
+}
+/* ================= TABLE FIX ================= */
+
+.table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 900px;  /* prevents shrinking */
+}
+
+th, td {
+  padding: 10px;
+  text-align: center;
+  white-space: nowrap; /* prevent text wrapping */
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  button {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+}
