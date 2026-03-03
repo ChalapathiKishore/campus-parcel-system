@@ -115,6 +115,7 @@ Backend powered by **Supabase**.
 ---
 
 ## 🔮 Future Improvements
+![WhatsApp Image 2026-03-03 at 6 57 11 PM](https://github.com/user-attachments/assets/4ea91ca8-f2ee-4319-8204-fe90dbbefe71)
 
 * Email notification integration
 * SMS alerts
