@@ -1,0 +1,11 @@
+# Node
+node_modules/
+
+# Supabase temp files
+supabase/.temp/
+
+# VS Code
+.vscode/
+
+# Environment variables
+.env
