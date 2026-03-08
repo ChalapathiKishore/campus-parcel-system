@@ -132,8 +132,8 @@ Aspiring Software Engineer
 ---
 ## use reference login 
 ### 🛡 Gatekeeper    
-239x1a0456@gprec.ac.in
-pass: kishoreAdmin
+456@gprec.ac.in
+pass: 456@gprec.ac.in
 ### 👨‍🎓 Student
-239x1a0461@gprec.ac.in
-pass : kishoreStudent
+457@gprec.ac.in
+pass : 457@gprec.ac.in
